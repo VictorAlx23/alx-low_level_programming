@@ -1,6 +1,8 @@
 #include "main.h"
 /**
  * main - print 10 times the alphabet in lowercase, followed by a new line
+ *
+ * void print_alphabet_x10(void) - prints alphabet 10 timea and returns 0
  */
 void print_alphabet_x10(void)
 {
