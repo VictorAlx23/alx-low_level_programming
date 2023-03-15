@@ -13,22 +13,30 @@ int **alloc_grid(int width, int height)
 	int **doubleptr;
 
 	if (width <= 0 || height <= 0)
+	{
 		return (NULL);
+	}
 	doubleptr = malloc(sizeof(int *) * height);
 	if (doubleptr == NULL)
+	{
 		return (NULL);
+	}
 	for (col = 0; col < height; col++)
 	{
 		doubleptr[col] = malloc(sizeof(int *) * width);
 		if (doubleptr[col] == NULL)
 		{
 			for (; col <= 0; col--)
+			{
 				free(doubleptr[col]);
+			}
 			free(doubleptr);
 			return (NULL);
 		}
 		for (row = 0; row < width; row++)
+		{
 			doubleptr[col][row] = 0;
+		}
 	}
 		return (doubleptr);
 }
