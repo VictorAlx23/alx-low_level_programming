@@ -9,6 +9,11 @@ void print_binary(unsigned long int n)
 	unsigned long int bits_masks = 1;
 	unsigned int bits_counts = 0;
 
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
 	while ((n >> bits_counts) > 0)
 		bits_counts++;
 	while (bits_counts > 0)
